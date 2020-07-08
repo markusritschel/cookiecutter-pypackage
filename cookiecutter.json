@@ -1,0 +1,17 @@
+{
+  "full_name": "Markus Ritschel",
+  "email": "kontakt@markusritschel.de",
+  "github_username": "markusritschel",
+  "project_name": "Python Boilerplate",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+  "package_name": "{{ cookiecutter.project_slug.replace('-', '_') }}",
+  "project_short_description": "Contains all the boilerplate you need to create a Python package.",
+  "pypi_username": "{{ cookiecutter.github_username }}",
+  "version": "0.1.0",
+  "use_pytest": "y",
+  "use_pypi_deployment_with_travis": "n",
+  "add_pyup_badge": "n",
+  "command_line_interface": ["Click", "Docopt", "No command-line interface"],
+  "create_author_file": "y",
+  "open_source_license": ["MIT license", "BSD license", "ISC license", "Apache Software License 2.0", "GNU General Public License v3", "Not open source"]
+}
