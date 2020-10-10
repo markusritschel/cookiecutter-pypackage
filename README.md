@@ -27,7 +27,7 @@ $ cookiecutter git+ssh://git@github.com/markusritschel/cookiecutter-pypackage.gi
 - [markusritschel](https://github.com/markusritschel)
 
 ## Contributing
-For issues & pull-requests accepted, please see the [CONTRIBUTING.md](./CONTRIBUTING.md).
+Issues & pull-requests accepted, please see the [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 
 ---
