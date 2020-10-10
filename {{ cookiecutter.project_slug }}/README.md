@@ -38,9 +38,9 @@ Run `make coverage` to generate a test coverage report and `make lint` to check 
 * [ ] TODO
 
 
-
 ## Maintainer
 [markusritschel](https://github.com/markusritschel)
 
+
 ## Contact & Issues
-For issues & pull-requests accepted, please contact me via {{ cookiecutter.email }} or open an [issue](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/issues).
+For any questions or issues, please contact me via {{ cookiecutter.email }} or open an [issue](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/issues).
