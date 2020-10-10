@@ -39,8 +39,12 @@ Run `make coverage` to generate a test coverage report and `make lint` to check 
 
 
 ## Maintainer
-[markusritschel](https://github.com/markusritschel)
+- [markusritschel](https://github.com/markusritschel)
 
 
 ## Contact & Issues
 For any questions or issues, please contact me via {{ cookiecutter.email }} or open an [issue](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/issues).
+
+
+---
+&copy; {{ cookiecutter.full_name }} {% now 'local', '%Y' %}
