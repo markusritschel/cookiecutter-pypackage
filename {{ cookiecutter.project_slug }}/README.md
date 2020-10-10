@@ -29,7 +29,7 @@ if you plan on making changes on the code.
 
 ## Testing
 To test the code, run `make test` in the source directory.
- This will execute both the unit tests and docstring examples (using pytest).
+This will execute both the unit tests and docstring examples (using pytest).
 
 Run `make coverage` to generate a test coverage report and `make lint` to check code style consistency.
 
