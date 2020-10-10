@@ -1,14 +1,14 @@
 # Cookiecutter-PyPackage Template
-
+[![License MIT](https://img.shields.io/github/license/markusritschel/cookiecutter-pypackage)](./LICENSE)
 
 _A Python Package CookieCutter Template_
 
 ## Setup
-This [CookieCutter] template is a boilerplate for my own personal Python projects.
+This [CookieCutter](https://github.com/cookiecutter/cookiecutter) template is a boilerplate for my own personal Python projects.
 It should be useful for small to medium size Python packages.
 
 ## Installation
-First, install [CookieCutter] via pip or conda.
+First, install [CookieCutter](https://github.com/cookiecutter/cookiecutter) via pip or conda.
 ```bash
 $ pip install -U cookiecutter
 $ conda install -c conda-forge cookiecutter
@@ -24,11 +24,11 @@ $ cookiecutter git+ssh://git@github.com/markusritschel/cookiecutter-pypackage.gi
 ```
 
 ## Maintainer
-[markusritschel](https://github.com/markusritschel)
+- [markusritschel](https://github.com/markusritschel)
 
 ## Contributing
-For issues & pull-requests accepted, please see the [CONTRIBUTING.md].
+For issues & pull-requests accepted, please see the [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 
-## License
-[MIT](./LICENSE) &copy; Markus Ritschel 2020
+---
+&copy; Markus Ritschel 2020
