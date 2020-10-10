@@ -7,3 +7,4 @@
 # Date:   {% now 'local', '%Y-%m-%d' %}
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 #
+__version__ = {{ cookiecutter.project_version }}
