@@ -18,7 +18,7 @@ test_requirements = [{%- if cookiecutter.use_pytest == 'y' %}'pytest>=3',{%- end
 
 setup(
     name='{{ cookiecutter.project_slug }}',
-    version='{{ cookiecutter.version }}',
+    version='{{ cookiecutter.project_version }}',
     author='{{ cookiecutter.full_name }}',
     author_email='{{ cookiecutter.email }}',
     description='{{ cookiecutter.project_short_description }}',
@@ -47,6 +47,6 @@ setup(
     install_requires=requirements,
     setup_requires=setup_requirements,
     test_suite='tests',
-    tests_require=test_re,
+    tests_require=test_requirements,
     zip_safe=False,
 )
