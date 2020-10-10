@@ -1,10 +1,7 @@
-Credits
-=======
+# Credits
 
-Development Lead
-----------------
+## Development Lead
 
 * {{ cookiecutter.full_name }} <{{ cookiecutter.email }}>
 
-Contributors
-------------
+## Contributors
