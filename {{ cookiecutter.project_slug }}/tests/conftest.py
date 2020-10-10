@@ -12,4 +12,4 @@ import pytest
 
 @pytest.fixture()
 def global_fixture(request):
-    pass
+    return 'Test'
