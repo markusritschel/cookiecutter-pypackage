@@ -12,11 +12,7 @@ Clone this repo via
 ```bash
 git clone https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
 ```
-Then, in the new directory
-```
-cd {{ cookiecutter.project_slug }}/
-```
-install the package via:
+Then, in the new directory (`cd {{ cookiecutter.project_slug }}/`) install the package via:
 ```
 python setup.py install
 ```
