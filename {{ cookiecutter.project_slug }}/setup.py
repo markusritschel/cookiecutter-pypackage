@@ -44,7 +44,7 @@ setup(
     ],
     url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}',
     packages=find_packages(include=['{{ cookiecutter.project_slug }}', '{{ cookiecutter.project_slug }}.*']),
-    install_requires=requirements,
+    install_requires=setup_requirements,
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
