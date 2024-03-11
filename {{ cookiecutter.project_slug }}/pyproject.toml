@@ -1,2 +1,22 @@
+[project]
+version = {{ cookiecutter.project_version }}
+dynamic = ["version"]
+requires-python = ">= 3.8"
+authors = [
+  {name = "{{ cookiecutter.project_author }}", email = "{{ cookiecutter.email }}"},
+]
+description = {{ cookiecutter.project_short_description }}
+readme = README.md
+license = {file = "LICENSE"}
+
+
 [tool.jupytext]
 formats = "ipynb,py:percent,md"
+
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+]
