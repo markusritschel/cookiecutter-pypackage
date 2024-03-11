@@ -5,7 +5,7 @@ _A Python Package CookieCutter Template_
 
 ## Setup
 This [CookieCutter](https://github.com/cookiecutter/cookiecutter) template is a boilerplate for my own personal Python projects.
-It should be useful for small to medium size Python packages.
+It should be used for small to medium size Python packages.
 
 ## Installation
 First, install [CookieCutter](https://github.com/cookiecutter/cookiecutter) via pip or conda.
@@ -15,7 +15,7 @@ $ conda install -c conda-forge cookiecutter
 ```
 
 ## Usage
-After that create a new cookiecutter from this template by executing one of the following commands:
+Now, create a new cookiecutter from this template by executing one of the following commands:
 ```bash
 $ cookiecutter gh:markusritschel/cookiecutter-pypackage
 $ cookiecutter https://github.com/markusritschel/cookiecutter-pypackage.git
@@ -24,37 +24,36 @@ $ cookiecutter git+ssh://git@github.com/markusritschel/cookiecutter-pypackage.gi
 ```
 
 ## Structure
-    
-    .
+
+```
     ├── AUTHORS.md
     ├── CHANGELOG.md
-    ├── docs
-    │   ├── authors.rst
-    │   ├── conf.py
-    │   ├── contributing.rst
-    │   ├── index.rst
-    │   ├── installation.rst
-    │   ├── make.bat
-    │   ├── Makefile
-    │   ├── readme.rst
-    │   └── usage.rst
+    ├── CITATION.cff
+    ├── docsrc
+    │   ├── authors.md
+    │   ├── changelog.md
+    │   ├── _config.yml
+    │   ├── content.md
+    │   ├── intro.md
+    │   ├── license.md
+    │   ├── logo.png
+    │   ├── markdown.md
+    │   ├── markdown-notebooks.md
+    │   ├── notebooks.ipynb
+    │   ├── readme.md
+    │   ├── references.bib
+    │   └── _toc.yml
     ├── LICENSE
     ├── Makefile
-    ├── MANIFEST.in
     ├── notebooks
+    ├── pyproject.toml
     ├── README.md
-    ├── references
-    ├── requirements.txt
-    ├── setup.cfg
-    ├── setup.py
-    ├── src
-    │   └── {{ cookiecutter.package_name }}
-    ├── tests
-    │   ├── conftest.py
-    │   ├── __init__.py
-    │   └── test_{{cookiecutter.package_name}}.py
-    └── tox.ini
-    
+    └── src
+        ├── {{ cookiecutter.package_name }}
+        └── tests
+        
+```
+
 
 ### Source code
 The package's source code resides in a subdirectory of `src`.
@@ -66,10 +65,10 @@ If the package's source code would exist in a direct subdirectory of the root di
 import mypackage
 ```
 would refer to the subdirectory instead of the installed version.
-Another good source on this can be found [here](https://blog.ionelmc.ro/2014/05/25/python-packaging/#the-structure).
+Another good source on this issue can be found [here](https://blog.ionelmc.ro/2014/05/25/python-packaging/#the-structure).
 
 ### Documentation
-The documentation is to be placed inside `docs/` and should make use of [Sphinx](https://www.sphinx-doc.org/).
+The documentation is to be placed inside `docsrc/` and makes use of jupyterbook.
 
 
 ## Maintainer
