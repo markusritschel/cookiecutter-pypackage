@@ -1,0 +1,140 @@
+#######################################################################################
+# A default configuration that will be loaded for all jupyter books
+# See the documentation for help and more options: 
+# https://jupyterbook.org/customize/config.html
+
+#######################################################################################
+# Book settings
+title                       : {{ cookiecutter.project_name }}
+author                      : {{ cookiecutter.github_username }}
+copyright                   : {{ cookiecutter.github_username }},  {% now 'local', '%Y' %}
+logo                        : logo.png
+
+
+###############################################################################
+# Execution settings
+# See https://jupyterbook.org/content/execute.html
+execute:
+    execute_notebooks: 'off'
+  #  exclude_patterns:
+  #      - 'pattern1'
+
+
+###############################################################################
+# LaTeX-specific settings
+latex:
+    latex_engine: "pdflatex"
+    latex_documents:
+        targetname: "book.tex"
+    use_jupyterbook_latex: true
+    biblio-style: "authoryear"
+
+
+# Add a bibtex file so that we can create citations
+bibtex_bibfiles:
+  - references.bib
+bibtex_reference_style: author_year
+
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/markusritschel/{{ cookiecutter.project_slug }}  # Online location of your book
+  path_to_book: docs  # Optional path to your book, relative to the repository root
+  branch: main  # Which branch of the repository should be used when creating links (optional)
+
+
+# Launch button settings
+launch_buttons:
+    notebook_interface: "jupyterlab"
+    binderhub_url: "https://mybinder.org"
+    colab_url: "https://colab.research.google.com"
+    thebe: true
+
+
+###############################################################################
+# HTML-specific settings
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  use_issues_button: true
+  use_repository_button: true
+  home_page_in_navbar: true
+  # use_repository_button: true
+  # use_issues_button: true
+  # use_edit_page_button: true
+  html_show_sourcelink: False
+  extra_navbar: '<hr> Powered by <a href="https://jupyterbook.org">Jupyter Book</a> '
+  extra_footer: ''
+  comments:
+    hypothesis: true
+  # utterances: false
+
+
+###############################################################################
+# Parse and render settings
+# See https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
+parse:
+    myst_enable_extensions:
+        - amsmath
+        - attrs_inline
+        - colon_fence
+        - deflist
+        - dollarmath
+        - fieldlist
+        - html_admonition
+        - html_image
+        - linkify
+        - replacements
+        - smartquotes
+        - substitution
+        - tasklist
+    myst_url_schemes: [mailto, http, https]
+
+
+###############################################################################
+# Options to configure the Sphinx document engine
+sphinx:
+  extra_extensions:
+  - 'sphinx.ext.autodoc'
+  # - 'sphinx_autodoc_typehints'
+  - 'sphinx.ext.autosummary'
+  # - sphinxcontrib.mermaid
+  # - sphinx_jupyterbook_latex
+  # - sphinx_tabs.tabs
+  - 'autoapi.extension'
+  - 'sphinx.ext.napoleon'
+  - 'sphinx.ext.githubpages'
+  - 'sphinx.ext.doctest'
+  - 'sphinx.ext.ifconfig'
+  - 'sphinx.ext.mathjax'
+  - 'sphinx.ext.coverage'
+  - 'nbsphinx'
+  # - 'myst_parser'
+  - 'sphinx.ext.intersphinx'
+  - 'sphinx.ext.todo'
+  - 'sphinx_issues'
+  - 'sphinx.ext.viewcode'
+  # - 'sphinxcontrib.bibtex'
+  config:
+    autodoc_typehints: both
+    autodoc_typehints_format: short
+    autoapi_dirs: ['../src/']
+    # autoapi_python_use_implicit_namespaces: True
+    autoapi_python_class_content: both
+    # autoapi_template_dir: '_autoapi_templates'
+    autoapi_keep_files: True
+    autoapi_root: '_autoapi'
+    autoapi_options: [members, 
+                      undoc-members, 
+                      private-members, 
+                      imported-members, 
+                      inherited-members, 
+                      # show-module-summary, 
+                      # show-inheritance, 
+                      # show-inheritance-diagram
+                      ]
+    autoapi_member_order: groupwise
+    # autoapi_member_order: alphabetical
+    # html_theme: sphinx_rtd_theme   # sphinx_rtd_theme, pydata_sphinx_theme, sphinx_book_theme
+    pygments_style: sphinx
+    # navigation_with_keys: True
+    # autosummary_generate: True
