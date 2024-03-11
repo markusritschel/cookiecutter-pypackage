@@ -8,6 +8,92 @@
 # ======================================================================================================
 
 
+## Clean-up python artifacts, logs and jupyter-book built
+cleanup: clean-pyc clean-logs clean-docs
+
+## Cleanup python file artifacts
+clean-pyc:
+	find . -name '*.pyc' -exec rm -f {} +
+	find . -name '*.pyo' -exec rm -f {} +
+	find . -name '*~' -exec rm -f {} +
+	find . -name '__pycache__' -exec rm -fr {} +
+
+
+## Cleanup log files
+clean-logs:
+	find ./logs -iname '*.log' -type f -exec rm {} +
+
+
+## Cleanup docs
+clean-docs:
+	jb clean --all docsrc/
+
+
+## Generate documentation
+docs:
+	jb build docsrc
+
+
+## Run pytest
+test:
+	pytest -n auto --doctest-modules -v {{ cookiecutter.package_name }}/tests/
+
+## Run pytest with coverage
+coverage:
+	pytest -n auto --doctest-modules --cov=seaborn --cov-config=.coveragerc {{ cookiecutter.package_name }}
+
+## Run flake8 linter
+lint:
+	flake8 {{ cookiecutter.package_name }}
+
+
+## Sync Jupyter notebooks
+sync-nb:
+	jupytext --sync notebooks/**/*.ipynb
+
+
+## Update the requirements.txt
+save-requirements:
+	pip freeze > requirements.txt
+
+
+## Create a conda environment.yml file
+save-conda-env:
+	pip_packages=$$(conda env export | grep -A9999 ".*- pip:" | grep -v "^prefix: ") ;\
+	conda env export --from-history | grep -v "^prefix: " > environment.yml ;\
+	echo "$$pip_packages" >> environment.yml ;\
+	sed -ie 's/name: base/name: $(CONDA_DEFAULT_ENV)/g' environment.yml; \
+	echo "$$CONDA_DEFAULT_ENV"
+
+
+## Install Python Dependencies via pip
+install-requirements:
+	python -m pip install -U pip setuptools wheel
+	mamba install --file requirements.txt
+	pip install sphinxcontrib-napoleon2 rinohtype sphinx-rtd-theme sphinx-autodoc-defaultargs nbsphinx myst-parser sphinx-issues sphinxcontrib-bibtex
+	# python -m pip install -r requirements.txt
+
+
+## Make the source code as package available
+src-available:
+	python setup.py develop
+
+
+## Create a conda environment named after the project slug, install packages, and activate it
+setup-conda-env:
+	@echo "Install mamba"
+	conda install -c conda-forge mamba
+	@echo "Create conda environment '{{ cookiecutter.project_slug }}'"
+	mamba env create --file environment.yml
+	@echo "Activate conda environment '{{ cookiecutter.project_slug }}'"
+	conda activate {{ cookiecutter.project_slug }}
+
+
+## Check if all packages listed in requirements.txt are installed in the current environment
+test-requirements:
+	@echo "Check if all packages listed in requirements.txt are installed in the current environment:"
+	# the "|| true" prevents the command returning an error if grep does not find a match
+	python -m pip -vvv freeze -r requirements.txt | grep "not installed" || true
 
 
 
