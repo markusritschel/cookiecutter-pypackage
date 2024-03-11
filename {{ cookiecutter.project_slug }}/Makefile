@@ -36,11 +36,7 @@ docs:
 
 ## Run pytest
 test:
-	pytest --doctest-modules -v ./src/tests/
-
-## Run pytest with coverage
-coverage:
-	pytest --doctest-modules --cov=seaborn --cov-config=.coveragerc ./src/
+	pytest --doctest-modules -v .
 
 ## Run flake8 linter
 lint:

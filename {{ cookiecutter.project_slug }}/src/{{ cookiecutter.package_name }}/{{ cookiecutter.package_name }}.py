@@ -28,6 +28,6 @@ def dummy_function(a: int, b: str) -> str:
     Example
     -------
     >>> dummy_function(7, 'letters')
-    7 letters
+    '7 letters'
     """
     return f"{a} {b}"
