@@ -36,15 +36,15 @@ docs:
 
 ## Run pytest
 test:
-	pytest -n auto --doctest-modules -v {{ cookiecutter.package_name }}/tests/
+	pytest --doctest-modules -v ./src/tests/
 
 ## Run pytest with coverage
 coverage:
-	pytest -n auto --doctest-modules --cov=seaborn --cov-config=.coveragerc {{ cookiecutter.package_name }}
+	pytest --doctest-modules --cov=seaborn --cov-config=.coveragerc ./src/
 
 ## Run flake8 linter
 lint:
-	flake8 {{ cookiecutter.package_name }}
+	flake8 ./src/
 
 
 ## Sync Jupyter notebooks
