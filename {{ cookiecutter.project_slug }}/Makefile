@@ -76,7 +76,7 @@ install-requirements:
 
 ## Make the source code as package available
 src-available:
-	python setup.py develop
+	pip install -e .
 
 
 ## Create a conda environment named after the project slug, install packages, and activate it
