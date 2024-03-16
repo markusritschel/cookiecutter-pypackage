@@ -16,7 +16,7 @@ parts:
    chapters:
      - file: _autoapi/index
      - file: readme
-       title: Readme
+       title: README
        sections:
          - file: license
            title: License

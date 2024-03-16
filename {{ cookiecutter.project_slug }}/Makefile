@@ -34,9 +34,16 @@ docs:
 	jb build docsrc
 
 
+## Test github actions locally
+test-gh-actions:
+	mkdir /tmp/artifacts
+	act push --artifact-server-path /tmp/artifacts --container-options "--userns host" --action-offline-mode
+
+
 ## Run pytest
-test:
+tests:
 	pytest --doctest-modules -v .
+
 
 ## Run flake8 linter
 lint:
@@ -50,15 +57,15 @@ sync-nb:
 
 ## Update the requirements.txt
 save-requirements:
-	pip freeze > requirements.txt
+	pip list --format=freeze > requirements.txt
 
 
 ## Create a conda environment.yml file
 save-conda-env:
 	pip_packages=$$(conda env export | grep -A9999 ".*- pip:" | grep -v "^prefix: ") ;\
-	conda env export --from-history | grep -v "^prefix: " > environment.yml ;\
-	echo "$$pip_packages" >> environment.yml ;\
-	sed -ie 's/name: base/name: $(CONDA_DEFAULT_ENV)/g' environment.yml; \
+	conda env export --from-history | grep -v "^prefix: " > environment.yaml ;\
+	echo "$$pip_packages" >> environment.yaml ;\
+	sed -ie 's/name: base/name: $(CONDA_DEFAULT_ENV)/g' environment.yaml; \
 	echo "$$CONDA_DEFAULT_ENV"
 
 
@@ -80,7 +87,7 @@ setup-conda-env:
 	@echo "Install mamba"
 	conda install -c conda-forge mamba
 	@echo "Create conda environment '{{ cookiecutter.project_slug }}'"
-	mamba env create --file environment.yml
+	mamba env create --file environment.yaml --no-default-packages 
 	@echo "Activate conda environment '{{ cookiecutter.project_slug }}'"
 	conda activate {{ cookiecutter.project_slug }}
 

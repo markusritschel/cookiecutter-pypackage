@@ -14,28 +14,29 @@ git clone https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.
 ```
 Then, in the new directory (`cd {{ cookiecutter.project_slug }}/`) install the package via:
 ```
-python setup.py install
+pip install .
 ```
 or via
 ```
-python setup.py develop
+pip install -e .
 ```
-if you plan on making changes on the code.
+if you plan on making changes to the code.
 
+Alternatively, install directly from GitHub via
+```
+pip install 'git+https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}.git'
+```
 
 ## Testing
-To test the code, run `make test` in the source directory.
-This will execute both the unit tests and docstring examples (using pytest).
+Run `make tests` in the source directory to test the code.
+This will execute both the unit tests and docstring examples (using `pytest`).
 
-Run `make coverage` to generate a test coverage report and `make lint` to check code style consistency.
+Run `make lint` to check code style consistency.
 
-
-## Features
-* [ ] TODO
 
 
 ## Maintainer
-- [markusritschel](https://github.com/markusritschel)
+- [{{ cookiecutter.github_username }}](https://github.com/{{ cookiecutter.github_username }})
 
 
 ## Contact & Issues

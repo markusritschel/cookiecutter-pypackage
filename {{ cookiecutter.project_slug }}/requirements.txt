@@ -1,0 +1,17 @@
+flake8
+jupyter-book
+jupytext
+sphinx-autoapi
+sphinx-autodoc-defaultargs
+sphinx-book-theme
+sphinx-comments
+sphinx-issues
+sphinx_rtd_theme
+sphinxcontrib-apidoc
+sphinxcontrib-napoleon
+{% if cookiecutter.command_line_interface|lower == 'click' -%}
+Click
+{% endif %}
+{% if cookiecutter.use_pytest == 'y' -%}
+pytest
+{% endif %}
