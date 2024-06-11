@@ -1,9 +1,7 @@
 [build-system]
-requires = ["setuptools @ git+https://github.com/pypa/setuptools.git@main"]
+requires = ["setuptools @ git+https://github.com/pypa/setuptools.git@main", "wheel"]
+build-backend = "setuptools.build_meta"
 # TODO: consider hatchling for built
-#requires = ["hatchling"]
-#build-backend = "hatchling.build"
-
 
 [project]
 name = "{{ cookiecutter.package_name }}"
@@ -14,11 +12,19 @@ authors = [
 readme = "README.md"
 license = {file = "LICENSE"}
 dynamic = ["version"]
-requires-python = ">= 3.8"
+requires-python = ">= 3.10"
+dependencies = []
 
 
-#[tool.hatch.build.targets.wheel]
-#packages = ["src/{{ cookiecutter.package_name }}"]
+[project.scripts]
+{{ cookiecutter.package_name }} = "{{ cookiecutter.package_name }}:cli"
+
+[tool.setuptools.dynamic]
+version = {attr = "{{ cookiecutter.package_name }}.__version__"}
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
 
 
 [tool.jupytext]
