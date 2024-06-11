@@ -1,0 +1,40 @@
+name: CI
+
+on: 
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build: 
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.10', '3.12']
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python }}
+        cache: 'pip'
+    
+    - name: Install CookieCutter & run setup
+      run: |
+        python -m pip install --upgrade pip
+        pip install cookiecutter wheel
+        pip install colorama
+        cookiecutter . --no-input
+
+    - name: Install dependencies
+      working-directory: ./python-boilerplate
+      run: pip install -r requirements.txt
+      
+    - name: Run tests
+      working-directory: ./python-boilerplate
+      run: |
+        pytest src/ --doctest-modules --doctest-continue-on-failure -ra -v
