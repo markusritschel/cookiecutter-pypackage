@@ -17,7 +17,8 @@ dependencies = []
 
 
 [project.scripts]
-{{ cookiecutter.package_name }} = "{{ cookiecutter.package_name }}:cli"
+{{ cookiecutter.project_slug }} = "{{ cookiecutter.package_name }}.cli:main"
+
 
 [tool.setuptools.dynamic]
 version = {attr = "{{ cookiecutter.package_name }}.__version__"}
