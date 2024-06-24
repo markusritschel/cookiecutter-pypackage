@@ -49,7 +49,7 @@ jobs:
       - name: Run tests
         run: |
           pip install pytest pytest-cov
-          pytest src/ --doctest-modules --doctest-continue-on-failure -ra -v --cov=./ --cov-report=xml --cov-report=html
+          python -m pytest -v
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
