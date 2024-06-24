@@ -4,7 +4,5 @@ jupytext
 {% if cookiecutter.command_line_interface|lower == 'click' -%}
 click
 {% endif %}
-{% if cookiecutter.use_pytest == 'y' -%}
 pytest
 pytest-cov
-{% endif %}
