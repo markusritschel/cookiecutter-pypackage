@@ -6,3 +6,4 @@ click
 {% endif %}
 pytest
 pytest-cov
+ruff
