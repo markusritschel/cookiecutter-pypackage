@@ -1,9 +1,0 @@
-flake8
-jupyter-book
-jupytext
-{% if cookiecutter.command_line_interface|lower == 'click' -%}
-click
-{% endif %}
-pytest
-pytest-cov
-ruff
