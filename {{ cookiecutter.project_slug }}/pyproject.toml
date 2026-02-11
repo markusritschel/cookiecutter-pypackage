@@ -38,12 +38,7 @@ dependencies = [
 {{ cookiecutter.project_slug }} = "{{ cookiecutter.package_name }}.cli:main"
 
 
-[tool.setuptools.dynamic]
-version = {attr = "{{ cookiecutter.package_name }}.__version__"}
 
-
-[tool.setuptools.packages.find]
-where = ["src"]
 [dependency-groups]
 dev = [
   {include-group = "lint"},
