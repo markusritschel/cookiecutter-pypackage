@@ -29,7 +29,7 @@ $ cookiecutter git+ssh://git@github.com/markusritschel/cookiecutter-pypackage.gi
     ├── AUTHORS.md
     ├── CHANGELOG.md
     ├── CITATION.cff
-    ├── docsrc
+    ├── docs
     │   ├── authors.md
     │   ├── changelog.md
     │   ├── _config.yml
@@ -65,10 +65,10 @@ If the package's source code would exist in a direct subdirectory of the root di
 import mypackage
 ```
 would refer to the subdirectory instead of the installed version.
-Another good source on this issue can be found [here](https://blog.ionelmc.ro/2014/05/25/python-packaging/#the-structure).
+Another good source on this issue can be found [here](https://blog.ionelmc.ro/2014/05/25/python-packaging/#the-structure) or [here](https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/).
 
 ### Documentation
-The documentation is to be placed inside `docsrc/` and makes use of jupyterbook.
+The documentation is to be placed inside `docs/` and makes use of jupyterbook.
 
 
 ## Maintainer
