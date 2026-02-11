@@ -100,7 +100,6 @@ testpaths = [
     "src",
 ]
 addopts = [
-    # "--import-mode=importlib",
     "--doctest-modules",
     "--doctest-continue-on-failure",
     "-ra -v",
@@ -109,11 +108,6 @@ addopts = [
     "--cov-report=html",
     "--cov-report=term-missing"
 ]
-
-
-[tool.flake8]
-max-line-length = 80
-max-complexity = 10
 
 
 [tool.cruft]
