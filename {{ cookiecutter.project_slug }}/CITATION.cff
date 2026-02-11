@@ -6,6 +6,6 @@ authors:
   orcid: "https://orcid.org/0000-0000-0000-0000"
 title: "{{ cookiecutter.project_name }}"
 version: {{ cookiecutter.project_version }}
-doi: 10.5281/zenodo.1234
+doi: 00.0000/zenodo.0000
 date-released: {% now 'utc', '%Y-%m-%d' %}
 url: "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}"
