@@ -2,6 +2,7 @@
 import os
 import shutil
 import subprocess
+from unittest.mock import DEFAULT
 
 if not {{ cookiecutter.is_research_project }}:
     REMOVE_PATHS = [
@@ -30,20 +31,43 @@ GREEN = "\033[92m"
 BLUE = "\033[94m"
 RESET = "\033[0m"
 
+DEFAULT = GREEN
+CODE = BLUE
+
+msg = f"""
+    🎉 Project setup complete! How to get started:
+    ----------------------------------------------
+
+    1. Change directory into your project (if you aren't already):
+         {CODE}cd {os.getcwd()}/ {DEFAULT}
+
+    2. Activate your virtual environment (see the README.md for more details):
+         On Linux/macOS: {CODE}source .venv/bin/activate {DEFAULT}
+         On Windows:    {CODE}.\.venv\Scripts\activate {DEFAULT}
+
+    3. Add a remote git repository (optional): {CODE}
+         {CODE}git remote add origin https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }} {DEFAULT}
+
+    4. To add packages, use:
+         {CODE}uv add <package_name> {DEFAULT}
+
+    5. To run scripts, use:
+         {CODE}uv run python <script.py> {DEFAULT}
+
+    6. To serve documentation:
+         {CODE}just docs {DEFAULT}
+
+
+    Happy coding! 🚀
+"""
+
+
 print(GREEN)
 print("="*100)
-print("")
 
-print(f"  ✅ The project is all set now.")
-print(f"     Please navigate now to the new directory {os.getcwd()}/. ")
+print(msg)
 
-print(f"  👉 If you want to add a remote git repository, run \n" + 
-      f"       {BLUE}git remote add origin https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }} \n" + GREEN +
-      f"     from the new directory.")
-
-print("  👉 It is furthermore recommended to work in a virtual environment (hint: run `make` to get help).")
-print("  ℹ️ For further information on how to use the project, please check the README.md file.")
-      
 print("")
 print("="*100)
 print(RESET)
+
