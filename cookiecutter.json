@@ -3,16 +3,16 @@
   "email": "johndoe@github.com",
   "github_username": "johndoe",
   "project_name": "Python Boilerplate",
-  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-').strip() }}",
-  "package_name": "{{ cookiecutter.project_slug.replace('-', '_') }}",
+  "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
+  "package_name": "{{ cookiecutter.project_slug|replace('-', '_') }}",
   "project_short_description": "A boilerplate for small and medium python packages",
-    "project_version": "0.1.0",
-    "command_line_interface": ["Click", "Docopt", "No command-line interface"],
-    "project_license": ["MIT license", "BSD license", "ISC license", "Apache Software License 2.0", "GNU General Public License v3", "Not open source"],
-    "sphinx_theme": ["furo", "sphinx_rtd_theme", "pydata_sphinx_theme", "sphinx_book_theme", "sphinx_immaterial"],
-    "_copy_without_render": [
-        ".github/workflows/*",
-        "docs/references.bib",
-        "justfile"
-    ]
+  "project_version": "0.1.0",
+  "command_line_interface": ["Click", "Docopt", "No command-line interface"],
+  "project_license": ["MIT license", "BSD license", "ISC license", "Apache Software License 2.0", "GNU General Public License v3", "Not open source"],
+  "sphinx_theme": ["furo", "sphinx_rtd_theme", "pydata_sphinx_theme", "sphinx_book_theme", "sphinx_immaterial"],
+  "_copy_without_render": [
+    ".github/workflows/*",
+    "docs/references.bib",
+    "justfile"
+  ]
 }
