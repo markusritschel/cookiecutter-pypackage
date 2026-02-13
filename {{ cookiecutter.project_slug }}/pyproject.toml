@@ -1,4 +1,5 @@
 [project]
+name = "{{ cookiecutter.package_name }}"
 version = "0.1.0"
 authors = [
   {name = "{{ cookiecutter.project_author }}", email = "{{ cookiecutter.email }}"},
