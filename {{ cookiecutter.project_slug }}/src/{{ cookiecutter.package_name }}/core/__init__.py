@@ -4,9 +4,8 @@
 # Date:   {% now 'local', '%Y-%m-%d' %}
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 #
-import pytest
+import logging
 
 
-@pytest.fixture
-def global_fixture(request):
-    return 'Test'
+log = logging.getLogger(__name__)
+
