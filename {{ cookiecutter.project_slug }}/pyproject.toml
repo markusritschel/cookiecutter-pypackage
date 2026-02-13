@@ -28,6 +28,7 @@ dependencies = [
   "nodejs",
   "numpy",
   "pandas",
+  "pandoc",
   "python-dotenv",
   "rich",
   "tqdm",
