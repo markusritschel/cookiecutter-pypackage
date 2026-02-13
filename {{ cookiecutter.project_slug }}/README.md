@@ -5,7 +5,7 @@
 {% if cookiecutter.project_license != "No License" %}[![License {{ cookiecutter.project_license }}](https://img.shields.io/github/license/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }})](./LICENSE){% endif %}
 
 
-{{ cookiecutter.project_short_description}}
+{{ cookiecutter.project_description}}
 
 
 ## Installation

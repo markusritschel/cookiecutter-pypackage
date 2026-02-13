@@ -4,7 +4,7 @@
 
 Welcome to the documentation of {{ cookiecutter.project_name }}!
 
-{{ cookiecutter.project_short_description }}
+{{ cookiecutter.project_description }}
 
 ```{tip}
 - Give a short introduction on what the package is about.

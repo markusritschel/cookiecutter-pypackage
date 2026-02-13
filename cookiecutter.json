@@ -6,7 +6,7 @@
   "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
   "package_name": "{{ cookiecutter.project_slug|lower|replace('-', '_') }}",
   "is_research_project": true,
-  "project_short_description": "A boilerplate for scientific projects using Python",
+  "project_description": "A boilerplate for scientific projects using Python",
   "project_version": "0.1.0",
   "command_line_interface": ["Click", "Docopt", "No command-line interface"],
   "project_license": ["MIT license", "BSD license", "ISC license", "Apache Software License 2.0", "GNU General Public License v3", "Not open source"],
