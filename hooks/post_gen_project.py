@@ -2,12 +2,10 @@
 import os
 import shutil
 import subprocess
-from unittest.mock import DEFAULT
 
 if not {{ cookiecutter.is_research_project }}:
     REMOVE_PATHS = [
         "data/",
-        "logs/",
         "notebooks/",
         "references/",
         "reports/",
