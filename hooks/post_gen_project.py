@@ -14,6 +14,18 @@ def remove_recursively(paths):
             else:
                 os.unlink(path)
 
+sphinx_files = [
+    'docs/conf.py',
+    'docs/_config/',
+    'docs/changelog.md',
+    
+]
+zensical_files = [
+    'zensical.toml'
+]
+myst_files = [
+    'docs/myst.yml'
+]
 research_project_files = [
     'data/',
     'notebooks/',
@@ -24,6 +36,17 @@ research_project_files = [
 
 if not {{ cookiecutter.is_research_project }}:
     remove_recursively(research_project_files)
+
+if "{{ cookiecutter.docs_engine|lower }}" == "sphinx":
+    remove_recursively(zensical_files)
+    remove_recursively(myst_files)
+elif "{{ cookiecutter.docs_engine|lower }}" == "zensical":
+    remove_recursively(sphinx_files)
+    remove_recursively(myst_files)
+
+elif "{{ cookiecutter.docs_engine|lower }}" == "myst":
+    remove_recursively(sphinx_files)
+    remove_recursively(zensical_files)
 
 
 # /// 2. Initialize Git repository ///

@@ -57,6 +57,7 @@ test = [
   "pytest-cov"
 ]
 docs = [
+{% if cookiecutter.docs_engine|lower == 'sphinx' -%}
   "furo",
   "jupyter-book",
   "jupyterbook-latex",
@@ -86,6 +87,12 @@ docs = [
   "sphinxcontrib-images",
   "sphinxcontrib-mermaid",
   "sphinxcontrib-napoleon",
+{% elif cookiecutter.docs_engine|lower == 'zensical' -%}
+  "zensical",
+  "mkdocstrings-python",
+{% elif cookiecutter.docs_engine|lower == 'myst' -%}
+  "mystmd",
+{%- endif %}
 ]
 
 
