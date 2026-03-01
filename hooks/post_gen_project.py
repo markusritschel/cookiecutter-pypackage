@@ -3,27 +3,40 @@ import os
 import shutil
 import subprocess
 
-if not {{ cookiecutter.is_research_project }}:
-    REMOVE_PATHS = [
-        "data/",
-        "notebooks/",
-        "references/",
-        "reports/",
-        "scripts/",
-    ]
-    for path in REMOVE_PATHS:
+
+# /// 1. Remove redundant paths ///
+
+def remove_recursively(paths):
+    for path in paths:
         if path and os.path.exists(path):
             if os.path.isdir(path):
                 shutil.rmtree(path)
             else:
                 os.unlink(path)
 
+research_project_files = [
+    'data/',
+    'notebooks/',
+    'references/',
+    'reports/',
+    'scripts/'
+]
 
-print("Initialize Git repository and make a first commit")
-subprocess.call(['git', 'init'])
-subprocess.call(['git', 'branch', '-m', 'main'])
-subprocess.call(['git', 'add', '*'])
-subprocess.call(['git', 'commit', '-m', 'Set up new project from cookiecutter template https://github.com/markusritschel/cookiecutter-pysci-project'])
+if not {{ cookiecutter.is_research_project }}:
+    remove_recursively(research_project_files)
+
+
+# /// 2. Initialize Git repository ///
+
+if not os.path.exists(".git"):
+     print("Initialize Git repository and make a first commit")
+     subprocess.run(["git", "init"], check=True)
+     subprocess.run(['git', 'branch', '-m', 'main'], check=True)
+     subprocess.run(["git", "add", "."], check=True)
+     subprocess.run(["git", "commit", "-m", "Set up new project from cookiecutter template https://github.com/markusritschel/cookiecutter-pysci-project"], check=True)
+
+
+# /// 3. Print message ///
 
 GREEN = "\033[92m"
 BLUE = "\033[94m"
@@ -59,12 +72,9 @@ msg = f"""
     Happy coding! 🚀
 """
 
-
 print(GREEN)
 print("="*100)
-
 print(msg)
-
 print("")
 print("="*100)
 print(RESET)
