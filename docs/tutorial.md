@@ -68,8 +68,8 @@ If everything goes well, you should see a message like this at the end of the se
 5. To run scripts, use:
      uv run python <script.py> 
 
-6. To serve documentation:
-     just docs-serve
+6. To build documentation:
+     just docs
 
 Happy coding! 🚀
 
