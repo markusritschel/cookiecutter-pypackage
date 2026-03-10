@@ -13,12 +13,8 @@ nav = [
   {"Features" = [
      "features/development.md",
      "features/justfile.md",
-     "features/uv.md",
      "features/code-quality.md",
      "features/documentation.md",
-     "features/github-actions.md",
-     "features/publish-package.md",
-     "features/research-projects.md",
   ]},
   "tutorial.md",
 ]
