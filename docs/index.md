@@ -50,15 +50,16 @@ DevContainer support.
 - **[Publishing](features/publish-package.md)** – PyPI package publishing with automated workflows.
 - **[Research Projects](features/research-projects.md)** – Optional data science project structure (`data/`, `notebooks/`, `reports/`).
 
-| Tool/Feature | Category |
-|---|---|
-| `uv` | Dependency management & packaging |
-| `pytest` | Testing and code coverage |
-| github actions | Continuous Integration |
-| `ruff` | Code linting and |
-| `ty` | Type hints |
-| DevContainer | Development container for VSCode |
-| justfile | Task automation (modern Make alternative) |
+| Tool/Feature   | Category                                  |
+| -------------- | ----------------------------------------- |
+| `uv`           | Dependency management & packaging         |
+| `pytest`       | Testing and code coverage                 |
+| github actions | Continuous Integration                    |
+| dependabot.yml | Dependabot configuration for gh actions   |
+| `ruff`         | Code linting and                          |
+| `ty`           | Type hints                                |
+| DevContainer   | Development container for VSCode          |
+| justfile       | Task automation (modern Make alternative) |
 
 
 ## How to continue
