@@ -3,7 +3,7 @@ version: 1
 project:
   id: bee58928-6ef1-47cb-9b21-71a12f227f77
   title: {{ cookiecutter.project_name }}
-  description: {{ cookiecutter.description }}
+  description: {{ cookiecutter.project_description }}
   keywords: []
   authors: [{{ cookiecutter.project_author }}]
   github: {{ cookiecutter.github_username }}
