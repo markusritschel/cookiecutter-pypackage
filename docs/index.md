@@ -32,34 +32,17 @@ Once finished, navigate into the created directory to start working on your new 
 
 ## Features
 
-This template comes ready with a selection of modern and useful tools:
+This template comes ready with a collection of modern and useful tools for an efficient [development flow](features/development.md):
 
-- **[Development Workflow](features/development.md)** – A collection of useful tools for an efficient development flow. 
-[uv](https://docs.astral.sh/uv/) helps you manage your package dependencies (it's *a lot* faster than conda). 
-Use [pytest](https://pytest.org/) to run your own tests and get coverage information.
-The _src layout_ ensures that only the installed version of your code is tested.
-State-of-the-art version control through git integration helps you keep track of your code changes. 
-[justfile](https://just.systems/) is a modern taskrunner. Use it as an alternative for Make.
-[GitHub Actions](https://github.com/features/actions) for CI/CD can automate a lot of things such as auto-deploying your documentation via Github pages, testing your code on every push, etc.
-DevContainer support allows you to code in a containered environment for an extra layer of security.
-- **[Code Quality](features/code-quality.md)** – Tools for ensuring code quality include Ruff for linting/formatting, ty for type checking, pytest for testing.
-- **[Package Management](features/uv.md)** – uv for dependency management and virtual environments.
-- **[Documentation](features/documentation.md)** – Sphinx with MyST Markdown, autoapi, bibliography support, and GitHub Pages deployment.
-- **[Task Automation](features/justfile.md)** – Just for simplified development task execution.
-- **[GitHub Actions CI/CD](features/github-actions.md)** – Automated testing, linting, and documentation deployment.
-- **[Publishing](features/publish-package.md)** – PyPI package publishing with automated workflows.
-- **[Research Projects](features/research-projects.md)** – Optional data science project structure (`data/`, `notebooks/`, `reports/`).
-
-| Tool/Feature   | Category                                  |
-| -------------- | ----------------------------------------- |
-| `uv`           | Dependency management & packaging         |
-| `pytest`       | Testing and code coverage                 |
-| github actions | Continuous Integration                    |
-| dependabot.yml | Dependabot configuration for gh actions   |
-| `ruff`         | Code linting and formatting               |
-| `ty`           | Type hints                                |
-| DevContainer   | Development container for VSCode          |
-| justfile       | Task automation (modern Make alternative) |
+- **[Package Management](features/uv.md)**: [uv](https://docs.astral.sh/uv/) for blazingly fast dependency management and virtual environments (it's _a lot_ faster than conda 🚀)
+- **[Code Quality](features/code-quality.md)**: Ruff for linting & formatting, ty for type checking, pytest for testing
+- **[Task Automation](features/justfile.md)**: Just as a modern Make alternative (`just qa`, `just docs`, …)
+- **[GitHub Actions CI/CD](features/github-actions.md)**: Automated testing, linting, and documentation deployment; Dependabot for dependency updates
+- **[Documentation](features/documentation.md)**: Sphinx with MyST Markdown, autoapi, and GitHub Pages deployment
+- **[Publishing](features/publish-package.md)**: PyPI publishing via `just publish` or automated GitHub Actions workflow
+- **[Research Projects](features/research-projects.md)**: Optional data science structure: `data/`, `notebooks/`, `reports/`
+- **src layout**: Ensures tests always run against the installed package, not loose source files
+- **DevContainer**: VSCode dev container for a reproducible development environment
 
 
 ## How to continue
