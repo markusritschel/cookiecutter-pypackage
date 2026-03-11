@@ -88,7 +88,7 @@ msg = f"""
     5. To run scripts, use:
          {CODE}uv run python <script.py> {DEFAULT}
 
-    6. To serve documentation:
+    6. To build documentation:
          {CODE}just docs {DEFAULT}
 
 
