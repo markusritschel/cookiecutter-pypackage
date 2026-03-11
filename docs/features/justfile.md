@@ -1,7 +1,7 @@
 # Task Automation with Just
 
-Similar to `Make`, [Just](https://just.systems/) simplifies common development tasks.
-This means you can specify targets in your justfile and then regularly executed tasks with complex commands (such as building your documentation) reduce from 
+Similar to `Make`, [Just](https://just.systems/) simplifies the execution of common and repetitive tasks.
+This means you can specify targets in your justfile to reduce regularly executed tasks with complex commands (such as building your documentation) from, for example,
 ```bash
 uv run --group docs sphinx-build -b html docs/ docs/_build/html
 ``` 
