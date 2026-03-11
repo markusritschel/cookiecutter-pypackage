@@ -4,7 +4,7 @@ icon: material/school
 
 # Tutorial
 
-!!! note "Requirements"
+??? note "Requirements"
     - Python 3.10 or higher
     - uv
     - git
