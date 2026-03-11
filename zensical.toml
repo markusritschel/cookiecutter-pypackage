@@ -9,14 +9,19 @@
 [project]
 nav = [
   {"Home" = "index.md"},
+  "tutorial.md",
   "prompts.md",
   {"Features" = [
      "features/development.md",
      "features/justfile.md",
+     "features/uv.md",
      "features/code-quality.md",
      "features/documentation.md",
+     "features/github-actions.md",
+     "features/publish-package.md",
+     "features/research-projects.md",
   ]},
-  "tutorial.md",
+  "tips.md"
 ]
 # The site_name is shown in the page header and the browser window title
 #
@@ -313,7 +318,7 @@ repo = "lucide/smile"
 # ----------------------------------------------------------------------------
 [[project.extra.social]]
 icon = "fontawesome/brands/github"
-link = "https://github.com/markusritschel/cookiecutter-pyproject"
+link = "https://github.com/markusritschel/cookiecutter-pypackage"
 
 
 [project.markdown_extensions.admonition]
