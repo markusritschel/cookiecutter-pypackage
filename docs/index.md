@@ -12,8 +12,6 @@ Depending on the responses to the [initial prompts](prompts), it can create a bo
     Either install it globally via pip or conda, or use `uv` to run it without the need of installing it.
     The latter is recommended.
 
-<!-- </details> -->
-
 ## Quickstart
 To get started, simply run
 ```bash
@@ -28,20 +26,19 @@ Once finished, navigate into the created directory to start working on your new 
     cookiecutter gh:markusritschel/cookiecutter-pypackage
     ```
 
-</details>
-
 
 ## Features
 
 This template comes ready with a selection of modern and useful tools:
 
 - **[Development Workflow](features/development.md)** – A collection of useful tools for an efficient development flow. 
-[uv](https://docs.astral.sh/uv/) helps youmanaging your package dependencies (it's *a lot* faster than conda). 
+[uv](https://docs.astral.sh/uv/) helps you manage your package dependencies (it's *a lot* faster than conda). 
 Use [pytest](https://pytest.org/) to run your own tests and get coverage information.
-The _src layout_ ensures that only the installed version of your code is checked.
-State-of-the-art version control through git integration helps you keep track. 
-[justfile](https://just.systems/) as a taskrunner (more modern alternative to Makefile). [GitHub Actions](https://github.com/features/actions) for CI/CD.
-DevContainer support.
+The _src layout_ ensures that only the installed version of your code is tested.
+State-of-the-art version control through git integration helps you keep track of your code changes. 
+[justfile](https://just.systems/) is a modern taskrunner. Use it as an alternative for Make.
+[GitHub Actions](https://github.com/features/actions) for CI/CD can automate a lot of things such as auto-deploying your documentation via Github pages, testing your code on every push, etc.
+DevContainer support allows you to code in a containered environment for an extra layer of security.
 - **[Code Quality](features/code-quality.md)** – Tools for ensuring code quality include Ruff for linting/formatting, ty for type checking, pytest for testing.
 - **[Package Management](features/uv.md)** – uv for dependency management and virtual environments.
 - **[Documentation](features/documentation.md)** – Sphinx with MyST Markdown, autoapi, bibliography support, and GitHub Pages deployment.
@@ -56,7 +53,7 @@ DevContainer support.
 | `pytest`       | Testing and code coverage                 |
 | github actions | Continuous Integration                    |
 | dependabot.yml | Dependabot configuration for gh actions   |
-| `ruff`         | Code linting and                          |
+| `ruff`         | Code linting and formatting               |
 | `ty`           | Type hints                                |
 | DevContainer   | Development container for VSCode          |
 | justfile       | Task automation (modern Make alternative) |
