@@ -1,5 +1,8 @@
-<!-- https://fpgmaas.github.io/cookiecutter-uv/ -->
+---
+icon: material/rocket-launch
+---
 
+<!-- https://fpgmaas.github.io/cookiecutter-uv/ -->
 # Cookiecutter PyProject :simple-pythonanywhere:
 
 

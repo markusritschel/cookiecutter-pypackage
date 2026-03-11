@@ -1,4 +1,8 @@
-# Documentation with Sphinx
+---
+icon: material/book-open-variant
+---
+
+# Documentation
 
 Generate professional documentation from Markdown and Python code using [Sphinx](https://www.sphinx-doc.org/). 
 Once configured in your GitHub repository settings, your documentation is automatically deployed to GitHub Pages via GitHub Actions [^1].

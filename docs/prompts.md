@@ -1,3 +1,7 @@
+---
+icon: material/form-textbox
+---
+
 # Prompts
 
 When creating your project from this template, CookieCutter will give you a few prompts you need to answer.

@@ -1,4 +1,8 @@
-# Development Workflow
+---
+icon: material/code-braces
+---
+
+# Development Flow
 
 This template provides a full, modern development environment with integrated tools for testing, code quality, and documentation.
 

@@ -1,4 +1,8 @@
-# Task Automation with Just
+---
+icon: material/console
+---
+
+# Task Automation
 
 Similar to `Make`, [Just](https://just.systems/) simplifies the execution of common and repetitive tasks.
 This means you can specify targets in your justfile to reduce regularly executed tasks with complex commands (such as building your documentation) from, for example,

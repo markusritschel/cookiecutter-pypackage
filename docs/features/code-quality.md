@@ -1,3 +1,7 @@
+---
+icon: material/shield-check
+---
+
 # Code Quality
 
 This template includes modern tools to ensure consistent, high-quality code through automated linting, formatting, type checking, and testing.
