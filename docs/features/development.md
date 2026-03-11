@@ -162,26 +162,3 @@ The `src/` layout ensures tests run against installed package.
 
 
 
-<!-- 
-uv as a dependency and virtual environment manager. 
-
-Just as a modern task manager. 
-
-Ruff for linting. 
-
-ty for type checks
-
-pytest 
-
-Typer forCLI 
-
-Github Actions for CI/CD
-
-DevContainer for VSCode
-
-Documentation with Sphinx, including support for Markdown files and automatic API documentation with autoapi.
-Auto-deployment of documentation to GitHub Pages with GitHub Actions.
-(in the future, consider switching to Zensical)
-
-src layout for better package structure. Ensures that tests always run against the installed version of the package, and helps to avoid issues with imports. 
--->
