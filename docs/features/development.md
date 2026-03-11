@@ -83,15 +83,15 @@ def test_user_data():
 just qa            # Format → Lint → Type check → Test
 ```
 
-### 4. Commit & Push
+### 4. Commit
 
 ```bash
 git add .
 git commit -m "Add user_data function"
-git push
 ```
-
-GitHub Actions automatically runs CI/CD. See [GitHub Actions](./github-actions.md).
+!!! tip "Best practice"
+    Make atomic commits. That is, commit every logical "bite" that does something meaningful in your code.
+    Use "active" language, i.e. describe what the commit does when applied.
 
 
 ### 5. Update Documentation
@@ -101,6 +101,14 @@ Keep your project's [documentation](./documentation) up-to-date. Edit the markdo
 just docs-serve    # View at http://localhost:8000
 ```
 
+
+### 6. Push to Github
+```bash
+git push
+```
+
+GitHub Actions automatically runs CI/CD. See [GitHub Actions](./github-actions.md). <br />
+If GitHub pages is configured, your documentation will be served online on `https://<your-username>.github.io/<package-slug>`.
 
 
 *** 
