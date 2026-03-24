@@ -3,7 +3,7 @@ icon: material/rocket-launch
 ---
 
 <!-- https://fpgmaas.github.io/cookiecutter-uv/ -->
-# Cookiecutter PyProject :simple-pythonanywhere:
+# PyProject Cookiecutter Template :simple-pythonanywhere:
 
 
 This is a [CookieCutter](https://www.cookiecutter.io/) template for Python projects.
@@ -18,7 +18,7 @@ Depending on the responses to the [initial prompts](prompts), it can create a bo
 ## Quickstart
 To get started, simply run
 ```bash
-uvx cookiecutter gh:markusritschel/cookiecutter-pypackage
+uvx cookiecutter gh:markusritschel/cookiecutter-pyproject
 ```
 and follow the [prompts](prompts) to customize your project.
 Once finished, navigate into the created directory to start working on your new Python project!
@@ -26,7 +26,7 @@ Once finished, navigate into the created directory to start working on your new 
 ??? note "Without uv"
     If you don't want to use uv, you can also install CookieCutter globally and run it with the following command:
     ```bash
-    cookiecutter gh:markusritschel/cookiecutter-pypackage
+    cookiecutter gh:markusritschel/cookiecutter-pyproject
     ```
 
 

@@ -5,18 +5,28 @@ icon: material/school
 # Tutorial
 
 ??? note "Requirements"
-    - Python 3.10 or higher
-    - uv
-    - git
-    - just (optional but recommended)
-    - GitHub account (optional)
+    - [uv](https://docs.astral.sh/uv/)
+    - [git](https://git-scm.com/) with initial configuration. Run
+      ```text
+      $ git config --global user.name "John Doe"
+      $ git config --global user.email johndoe@example.com
+      ```
+      with your name and e-mail.
+    - [just](https://just.systems/) (optional but recommended)
+    - [GitHub](https://github.com/) account (optional)
 
 
 ## Create a new project using the template
 Make sure to have `uv` installed, and then run the following command to create a new project from this template:
 ```bash
-uvx cookiecutter gh:markusritschel/cookiecutter-pypackage
+uvx cookiecutter gh:markusritschel/cookiecutter-pyproject
 ```
+<!-- Alternative URIs:
+cookiecutter gh:markusritschel/cookiecutter-pyproject
+cookiecutter https://github.com/markusritschel/cookiecutter-pyproject.git
+cookiecutter git+https://github.com/markusritschel/cookiecutter-pyproject
+cookiecutter git+ssh://git@github.com/markusritschel/cookiecutter-pyproject.git
+-->
 
 Fill in the prompts to customize your project. For example:
 
@@ -52,7 +62,7 @@ Fill in the prompts to customize your project. For example:
 
 If everything goes well, you should see a message like this at the end of the setup process:
 
-```
+```toml
 🎉 Project setup complete! How to get started:
 ----------------------------------------------
 
@@ -63,7 +73,7 @@ If everything goes well, you should see a message like this at the end of the se
      On Linux/macOS: source .venv/bin/activate 
      On Windows:    .\.venv\Scriptsctivate 
 
-3. Add a remote git repository (optional): 
+3. Add a remote git repository (optional):  # (1)!
      git remote add origin https://github.com/<your-github-username>/<package-slug> 
 
 4. To add packages, use:
@@ -78,6 +88,8 @@ If everything goes well, you should see a message like this at the end of the se
 Happy coding! 🚀
 
 ```
+
+1. Visit the official [github documentation](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories) for more details
 
 The template will already have a git repository initialized in your new project directory.
 You can now add a remote repository and push your new project to GitHub.

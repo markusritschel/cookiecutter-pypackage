@@ -38,8 +38,7 @@ dependencies = [
 
 
 [project.scripts]
-{{ cookiecutter.project_slug }} = "{{ cookiecutter.package_name }}.cli:main"
-
+{{ cookiecutter.package_name }} = "{{ cookiecutter.package_name }}.cli:app"
 
 
 [dependency-groups]
@@ -121,6 +120,10 @@ addopts = [
   "--cov-report=html",
   "--cov-report=term-missing"
 ]
+
+
+[tool.uv]
+package = true
 
 
 [tool.cruft]
