@@ -1,3 +1,7 @@
+> [!IMPORTANT]
+> This repository has been archived and is no longer maintained.
+> Please use [cookiecutter-pyproject](https://github.com/markusritschel/cookiecutter-pyproject) instead, which supersedes this project.
+
 # Cookiecutter Py(thon)-Project Template <!-- omit in toc -->
 
 ![build](https://github.com/markusritschel/cookiecutter-pyproject/actions/workflows/main.yml/badge.svg)
